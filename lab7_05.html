@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            var tbl = document.getElementById("list");
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+            var cell3 = row.insertCell();
+
+            cell1.innerHTML = document.getElementById("nametext").value;
+            cell2.innerHTML = document.getElementById("addstext").value;
+            cell3.innerHTML = document.getElementById("teltext").value;
+        }
+    </script>
+    
+</head>
+
+<body>
+    <form>
+        <b>ชื่อลูกค้า :</b><input type="text" id=nametext><br>
+        <b>ที่อยู่ :</b><input type="text" id=addstext><br>
+        <b>โทรศัพท์ :</b><input type="text" id=teltext><br>
+        <input type="button" id="addBotton" value="เพิ่ม" onclick="add()">
+    </form>
+
+    <table border="1" id = "list">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+    </table>
+</body>
+
+</html>
